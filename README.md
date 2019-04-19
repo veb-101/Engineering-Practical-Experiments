@@ -1,4 +1,4 @@
-# Engineering Practical experiments
+# Engineering Practical Experiments
 Collection of Mumbai University Computer Engineering Practicals
 
 Languages Used:
