@@ -5,9 +5,9 @@
 void scaling(int x1, int y1, int x2, int y2, int x3, int y3){
     int x, y;
     int newx1, newy1, newx2, newy2, newx3, newy3;
-    printf("Enter scaling co-ordinates (x, y): "); 
+    printf("Enter scaling co-ordinates (x, y): ");
     scanf("%d%d",&x,&y);
-    // (- x1) (-y1) to retrace to starting co-ordinate
+    // (- x1) (-y1) to shift back to starting co-ordinate
     newx1 = (x1*x) - x1;
     newy1 = (y1*y) - y1;
     newx2 = (x2*x) - x1;

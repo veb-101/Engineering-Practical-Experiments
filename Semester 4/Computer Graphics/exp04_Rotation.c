@@ -14,6 +14,7 @@ void rotation(int x1, int y1, int x2, int y2, int x3,int y3){
     printf("\nEnter the angle for rotation: ");
     scanf("%d",&r);
     t=3.14*r/180;
+    // shifting to  a reference point
     x1 -= 100;
     y1 -= 100;
     x2 -= 100;
@@ -29,12 +30,12 @@ void rotation(int x1, int y1, int x2, int y2, int x3,int y3){
     newx3 = roundno((x3*cose) - (y3*sine));
     newy3 = roundno((x3*sine) + (y3*cose));
     // cause anticlockwise spin
-    newx1 -= 100;
-    newy1 -= 100;
-    newx2 -= 100;
-    newy2 -= 100;
-    newx3 -= 100;
-    newy3 -= 100;
+    // newx1 -= 100;
+    // newy1 -= 100;
+    // newx2 -= 100;
+    // newy2 -= 100;
+    // newx3 -= 100;
+    // newy3 -= 100;
     line(newx1,newy1,newx2,newy2);
     line(newx2,newy2,newx3,newy3);
     line(newx3,newy3,newx1,newy1);

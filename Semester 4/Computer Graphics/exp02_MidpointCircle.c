@@ -7,17 +7,19 @@ void Circle(int xc, int yc, int r){
     do
     {
 
-        //   (-x, y).....|......(x, y)
-        // (-y, x).......|..........(y, x)
+        //   [(-x, y).....|......(x, y)] set 1
+        // [(-y, x).......|..........(y, x)] set 2
         // -----------(xc,yc)-----------------------
-        // (-y, -x)......|.........(y, -x)
-        //   (-x, -y)....|......(x, -y)
+        // [(-y, -x)......|.........(y, -x)] set 2
+        //   [(-x, -y)....|......(x, -y)] set 1
 
+        // set 1 points
         putpixel(xc+x, yc+y, WHITE);
         putpixel(xc+x, yc-y, WHITE);
         putpixel(xc-x, yc-y, WHITE);
         putpixel(xc-x, yc+y, WHITE);
         delay(20);
+        // set 2 points
         putpixel(xc+y, yc+x, WHITE);
         putpixel(xc+y, yc-x, WHITE);
         putpixel(xc-y, yc-x, WHITE);
