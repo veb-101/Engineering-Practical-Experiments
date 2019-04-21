@@ -1,5 +1,5 @@
 // WAP for koch curve
-// credits: http : //computergraphicsinc.blogspot.com/2014/12/c-program-to-draw-koch-curve-using.html
+// credits: http://computergraphicsinc.blogspot.com/2014/12/c-program-to-draw-koch-curve-using.html
 
 #include <graphics.h>
 #include <stdio.h>
@@ -8,6 +8,15 @@
 
 void koch(int x1, int y1, int x2, int y2, int it)
 {
+    // M_PI = mathematical pie constant inside math.h
+
+    //             X
+    //             |
+    //
+    //    |_____|_____|______|
+    //   x1   x3    x4      x2
+
+
     float angle = 60 * M_PI / 180;
     int x3 = (2 * x1 + x2) / 3;
     int y3 = (2 * y1 + y2) / 3;
@@ -27,7 +36,6 @@ void koch(int x1, int y1, int x2, int y2, int it)
     }
     else
     {
-
         line(x1, y1, x3, y3);
         line(x3, y3, x, y);
         line(x, y, x4, y4);
@@ -35,7 +43,7 @@ void koch(int x1, int y1, int x2, int y2, int it)
     }
 }
 
-int main(void)
+int main()
 {
     int gd = DETECT, gm;
     int x1 = 100, y1 = 100, x2 = 400, y2 = 400;
