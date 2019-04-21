@@ -9,7 +9,7 @@ def default_matrix_multiplication(a, b):
     """
     if len(a) != 2 or len(a[0]) != 2 or len(b) != 2 or len(b[0]) != 2:
         raise Exception('Matrices should be 2x2!')
-    print(a[0][0] * b[0][1] + a[0][1] * b[1][1])
+    # print(a[0][0] * b[0][1] + a[0][1] * b[1][1])
     new_matrix = [[a[0][0] * b[0][0] + a[0][1] * b[1][0], a[0][0] * b[0][1] + a[0][1] * b[1][1]],
                   [a[1][0] * b[0][0] + a[1][1] * b[1][0], a[1][0] * b[0][1] + a[1][1] * b[1][1]]]
 
