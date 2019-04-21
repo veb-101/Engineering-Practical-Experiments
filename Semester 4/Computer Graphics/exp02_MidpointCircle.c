@@ -9,12 +9,12 @@ void Circle(int xc, int yc, int r){
 
         //   (-x, y).....|......(x, y)
         // (-y, x).......|..........(y, x)
-        // --------------------------------------
+        // -----------(xc,yc)-----------------------
         // (-y, -x)......|.........(y, -x)
         //   (-x, -y)....|......(x, -y)
-    
-        putpixel(xc+x, yc+y, WHITE);  
-        putpixel(xc+x, yc-y, WHITE);   
+
+        putpixel(xc+x, yc+y, WHITE);
+        putpixel(xc+x, yc-y, WHITE);
         putpixel(xc-x, yc-y, WHITE);
         putpixel(xc-x, yc+y, WHITE);
         delay(20);
@@ -22,7 +22,7 @@ void Circle(int xc, int yc, int r){
         putpixel(xc+y, yc-x, WHITE);
         putpixel(xc-y, yc-x, WHITE);
         putpixel(xc-y, yc+x, WHITE);
-        
+
         if (p<0){
             p += (2*x + 3);
         }
@@ -33,7 +33,7 @@ void Circle(int xc, int yc, int r){
         x += 1;
         delay(20);
     } while (x<y);
-    
+
 }
 
 void main(){
