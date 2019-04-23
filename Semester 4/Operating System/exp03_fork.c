@@ -1,5 +1,7 @@
 #include <sys/types.h>
 #include <stdio.h>
+
+// https://www.geeksforgeeks.org/fork-system-call/
 void main()
 {
     int pid = fork();
@@ -16,6 +18,14 @@ void main()
         wait();
         printf("\nThis is parent.");
         printf("\nParent PID: %d", getpid());
-        printf("\nChild PID: %d", pid);
+        printf("\nChild PID: %d\n", pid);
     }
 }
+
+/*
+Program execution steps:
+
+$ gcc exp03_fork.c -o exp3
+<<ignore warnings>>
+$ ./exp3
+*/
