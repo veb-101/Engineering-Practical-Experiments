@@ -9,7 +9,7 @@ void main()
     if (pid == 0)
     {
         printf("This is child process.\n");
-        printf("Child pid: %d", getpid());
+        printf("Child PID: %d", getpid());
         execvp("\nbin/ls", NULL);
         // http://www.csl.mtu.edu/cs4411.ck/www/NOTES/process/fork/exec.html
     }

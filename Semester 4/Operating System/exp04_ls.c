@@ -20,8 +20,8 @@ void main()
 
 /*
 Program execution:
-1) create a directory is the folder as the program file
-2) in the newly created directory create any file.
+1) create a directory in the same folder as the program file
+2) In the newly created directory, create any new file.
 
 $ gcc exp04_lc.c -o exp4lc
 $ ./exp4lc

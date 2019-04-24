@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 /*
 Program execution:
-1) create a file eg. test.txt in the same directory
+1) create a file eg. test.txt in the same directory as the program
 
 $ gcc exp04_mv.c -o exp4mv
 $ ./exp4lc test.txt <newFile name>

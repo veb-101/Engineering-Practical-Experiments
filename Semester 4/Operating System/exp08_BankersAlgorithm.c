@@ -25,9 +25,6 @@ int main()
     int flag = 0;
     int f[n], ans[n], ind = 0;
 
-    // n: number of processes
-    // m: no. of resources for each process
-
     // to indicate is the process has been finished and added to the safe sequence
     // f = {0, 0, 0, 0, 0}
     for (k = 0; k < n; k++)
