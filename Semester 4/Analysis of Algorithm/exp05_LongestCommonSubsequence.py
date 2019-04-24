@@ -35,9 +35,19 @@ if __name__ == "__main__":
     sequenceA.insert(0, "0")
     sequenceB.insert(0, "0")
 
-    # For zeroing the first row and first column
+    # For saving the values of the matrix
     matrixValues = [[0 for x in range(len(sequenceA))] for y in range(len(sequenceB))]
+    # For savinf the operations done in each cell of matrixValues
     operations = [["X" for x in range(len(sequenceA))] for y in range(len(sequenceB))]
+
+    # or
+    # matrixValues = [[]] * len(sequenceB)
+    # for i in range(len(sequenceB)):
+    #     matrixValues[i] = [0] * len(sequenceA)
+    #
+    # operations = [[]] * len(sequenceB)
+    # for i in range(len(sequenceB)):
+    #     operations[i] = ["X"] * len(sequenceA)
 
     longestCommonSequence(matrixValues, operations, sequenceA, sequenceB)
     longestSequenceLength = matrixValues[len(sequenceB) - 1][len(sequenceA) - 1]

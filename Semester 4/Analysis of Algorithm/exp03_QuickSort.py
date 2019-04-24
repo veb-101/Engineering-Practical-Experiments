@@ -16,3 +16,8 @@ if __name__ == "__main__":
     # # arr = [1, 2, 3, 0,24]
     # quicksort(arr)
     print(f"Sorted using Quick Sort: {quicksort(alist)}")
+
+
+# Time Complexity: O(n*logn)
+# quick sort is in place sorting algorithm
+# quick sort is not stable

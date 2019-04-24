@@ -1,8 +1,7 @@
-# Credits: StackOverflow, who else....
+# Credits: StackOverflow, where else....
 # https://stackoverflow.com/questions/29456502/subset-sum-with-backtracking-on-python
 # done with the help of generators
 # might be useful to learn about them before jumping in
-#
 
 
 def sumOfSubset(array, num):
@@ -15,15 +14,11 @@ def sumOfSubset(array, num):
 
     # element not selected
     for solution in sumOfSubset(array[1:], num):
-        print("in first loop")
         yield solution
-    print("after first", array)
 
     # element selected
     for solution in sumOfSubset(array[1:], num - array[0]):
-        print("in first loop")
         yield [array[0]] + solution
-    print("after second", array)
 
 
 if __name__ == '__main__':

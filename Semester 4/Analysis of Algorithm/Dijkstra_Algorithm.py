@@ -13,9 +13,9 @@ Assign distance value as 0 for the source vertex so that it is picked first.
 ….a) Pick a vertex u which is not there in sptSet and has minimum distance value.
 ….b) Include u to sptSet.
 ….c) Update distance value of all adjacent vertices of u. To update the distance values,
-iterate through all adjacent vertices. For every adjacent vertex v,
-if sum of distance value of u (from source) and weight of edge u-v, is less than
-the distance value of v, then update the distance value of v.
+    iterate through all adjacent vertices. For every adjacent vertex v,
+    if sum of distance value of u (from source) and weight of edge u-v, is less than
+    the distance value of v, then update the distance value of v.
 '''
 
 import sys
@@ -33,11 +33,11 @@ class Graph():
             print(f"Distance from  vertex {self.src} to vertex {node}: {dist[node]}")
 
     def minDistance(self, dist, sptSet):
-        min = sys.maxsize
+        minimum = sys.maxsize
         for v in range(self.V):
-            if dist[v] < min and sptSet[v] == False:
+            if dist[v] < minimum and sptSet[v] == False:
                 # print(f"dist[{v}] = {dist[v]}")
-                min = dist[v]
+                minimum = dist[v]
                 min_index = v
 
         return min_index
@@ -80,4 +80,4 @@ if __name__ == '__main__':
                [0, 0, 2, 0, 0, 0, 6, 7, 0]
                ]
 
-    g.dijkstra(0)
+    g.dijkstra(5)

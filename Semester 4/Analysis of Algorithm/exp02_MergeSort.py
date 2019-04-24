@@ -44,6 +44,10 @@ if __name__ == "__main__":
     mergeSort(a)
     print(f"Array sorted using Merge Sort: {a}")
 
+# Time Complexity : O(n*logn)
+# merge sort is bit ab in-place sorting algorithm
+# merge sort is stable
+
 # Sample Output
 # Enter size of arays: 5
 # Enter number 1: 12

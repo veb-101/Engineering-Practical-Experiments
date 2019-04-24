@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def floyd_war(matrixSize, adjMatrix):
     D_old = adjMatrix[:]
     D_new = [[0 for x in range(matrixSize)] for y in range(matrixSize)]
@@ -17,7 +14,7 @@ def floyd_war(matrixSize, adjMatrix):
         for row in range(matrixSize):
             for column in range(matrixSize):
                 value = min(D_old[row][column], D_old[row][node] + D_old[node][column])
-                D_new[row][column] = np.inf if value > 90 else value
+                D_new[row][column] = test if value > 90 else value
                 print(D_new[row][column], end=" ")
             print()
         D_old = D_new[:]
@@ -31,7 +28,8 @@ if __name__ == "__main__":
     adjMatrix = [[int(input(f"Enter value for {row + 1, column + 1}:")) if column != row else 0
                   for column in range(matrixSize)]for row in range(matrixSize)]
 
-    adjMatrix = [[np.inf if adjMatrix[i][j] >= 90 else adjMatrix[i][j] for j in range(matrixSize)]
+    test = float("inf")
+    adjMatrix = [[test if adjMatrix[i][j] >= 90 else adjMatrix[i][j] for j in range(matrixSize)]
                  for i in range(matrixSize)]
 
     print()

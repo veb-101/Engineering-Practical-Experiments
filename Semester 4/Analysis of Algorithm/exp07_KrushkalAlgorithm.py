@@ -59,7 +59,8 @@ def krushkals(edgeObj, n, E):
         i += 1
     print("\nEdges selected:")
     for i in range(n-1):
-        print(f"Edge{output[i].source, output[i].destination}-cost:{output[i].weight}")
+        # print(f"Edge{output[i].source, output[i].destination}-cost:{output[i].weight}")
+        print(f"{output[i]}")
         cost += output[i].weight
     print(f"Total Cost of MST= {cost}")
 
@@ -73,8 +74,8 @@ def Main():
         d = int(input("Enter sink: "))
         w = int(input("Enter weight: "))
         edgeObj.append(Edge(s, d, w))
-    for i in edgeObj:
-        print(i)
+    # for i in edgeObj:
+    #     print(i)
     krushkals(edgeObj, n, E)
 
 
