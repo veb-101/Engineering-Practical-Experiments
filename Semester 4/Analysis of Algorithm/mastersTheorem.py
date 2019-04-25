@@ -1,31 +1,23 @@
 # not complete
 from math import log
 
+print("Enter coefficient values of eqn a(T(n/b) * n^p * log(n)^k")
 a = int(input("Enter a for the given recurrence eqn: "))
 b = int(input("Enter b for the given recurrence eqn: "))
-n = int(input("Enter n for the given recurrence eqn: "))
-fn = input("Enter expression in terms of n: ")
-fn = eval(fn)
+p = int(input("Enter p for the given recurrence eqn: "))
+k = int(input("Enter k for the given recurrence eqn: "))
+# fn = eval(fn)
 
-n_log_a_b = n ** (log(a, b))
-print(fn, n_log_a_b)
-if fn < n_log_a_b:
-    print("This is case I")
-    e = 1
-    new_fn = n ** (log(a, b) - e)
-    while new_fn != fn:
-        e += 1
-        new_fn = n ** (log(a, b) - e)
+n_log_a_b = log(a, b)
+if n_log_a_b > p:
+    print("Case 1: slower growth")
+    print(f"E:{n_log_a_b - p}")
+    print(f"Solution:Theta(n ^{n_log_a_b})")
 
-    print("T(n): {}".format(n ** (log(a, b))))
+if n_log_a_b < p:
+    print("Case 3: Faster growth")
+    print(f"Solution:Theta(n ^{p})")
 
-elif fn == int(n_log_a_b):
-    print("This is case II")
-    k = 0
-    new_fn = (n ** log(a, b)) * log(n)**k
-    print(new_fn)
-    while new_fn != fn:
-        k += 1
-        new_fn = (n ** log(a, b)) * log(n) ** k
-    print(k)
-    print(f"T(n): {(n ** log(a,b)) * (log(n))**k+1 }")
+if n_log_a_b == p:
+    print("Case 2: Same growth")
+    print(f"Solution: Theta(n^{n_log_a_b}*log(n)^{k+1})")

@@ -30,3 +30,7 @@ if __name__ == '__main__':
             print(f"found at position: {i + 1}")
     else:
         print(f"pattern not found")
+
+# Worst case Time complexity will be O(m(n−m+1))
+# m - len(pattern)
+# n = len(text)

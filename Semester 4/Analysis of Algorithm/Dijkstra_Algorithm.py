@@ -81,3 +81,4 @@ if __name__ == '__main__':
                ]
 
     g.dijkstra(5)
+# Time Complexity: O(vertices^2)

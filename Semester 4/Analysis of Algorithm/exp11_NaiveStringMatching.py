@@ -33,3 +33,5 @@ if __name__ == '__main__':
             print(f"Pattern found at position: {i}")
     else:
         print("Pattern not found")
+
+# Time complexity : O(m*n)

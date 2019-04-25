@@ -1,3 +1,7 @@
+# A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.
+# For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
+
+
 def longestCommonSequence(matrixValues, operations, sequenceA, sequenceB):
     for row in range(1, len(sequenceB)):
         for column in range(1, len(sequenceA)):
@@ -68,3 +72,7 @@ if __name__ == "__main__":
     #     print()
     print(f"Longest common sequence length is: {longestSequenceLength}")
     print(f"Sequence is: '{sequence}'")
+
+# Time Complexity - O(m*n)
+# m = length of sequenceA
+# n = length of sequenceB

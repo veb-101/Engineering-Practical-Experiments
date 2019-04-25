@@ -2,7 +2,7 @@ from copy import deepcopy as dc
 
 
 def getBoard(size):
-    board = ["_"]*size
+    board = [[]]*size
     for i in range(size):
         board[i] = ["_"]*size
     return board

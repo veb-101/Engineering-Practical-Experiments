@@ -39,3 +39,5 @@ def kmp(text, pattern):
 
 
 print(kmp("badbabababadaa", "ababada"))
+
+# Time complexity:O(m+n)
