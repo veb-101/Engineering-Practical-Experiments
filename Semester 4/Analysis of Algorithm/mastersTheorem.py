@@ -14,10 +14,10 @@ if n_log_a_b > p:
     print(f"E:{n_log_a_b - p}")
     print(f"Solution:Theta(n ^{n_log_a_b})")
 
-if n_log_a_b < p:
-    print("Case 3: Faster growth")
-    print(f"Solution:Theta(n ^{p})")
-
 if n_log_a_b == p:
     print("Case 2: Same growth")
     print(f"Solution: Theta(n^{n_log_a_b}*log(n)^{k+1})")
+
+if n_log_a_b < p:
+    print("Case 3: Faster growth")
+    print(f"Solution:Theta(n ^{p})")
