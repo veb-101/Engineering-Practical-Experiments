@@ -1,33 +1,34 @@
-#Experiment No.: 12
-#Roll no.: 77
-
 #Reading a file
-open(FH,"<file.txt"); 
+open(FH,"<file.txt");
 while(<FH>)
-{ print "$_"; } 
+{
+    print "$_";
+}
 close FH;
 
 #Writing to a file
-open(FH,">test.txt"); 
+open(FH,">test.txt");
 print "\nEnter Data to Write: ";
-my $var=<>; 
+my $var=<>;
 print FH $var;
 print $var;
 close FH;
 
 #Appending to a file
-open(FH,">>test.txt"); 
+open(FH,">>test.txt");
 print "\nEnter Data to Append: ";
-my $var=<>; 
-print FH $var; 
+my $var=<>;
+print FH $var;
 close FH;
 
 #Copying files
-open(DATA1, "<file1.txt"); 
-open(DATA2, ">file2.txt"); 
-{ print DATA2 $_; } 
+open(DATA1, "<file1.txt");
+open(DATA2, ">file2.txt");
+{
+    print DATA2 $_;
+}
 print "Data from file1 to file2 copied Sucessfully.";
-close( DATA1 ); 
+close( DATA1 );
 close( DATA2 );
 
 #Rename a file
@@ -49,33 +50,16 @@ while (<FH>) {
 print("lines=$lines words=$words chars=$chars\n");
 
 print "\nRegular Experession";
-my $userinput="Hello Everybody!"; 
-if($userinput=~m/(Hello).*/) 
-{ print "\nFound Pattern"; } 
-else 
+my $userinput="Hello Everybody!";
+if($userinput=~m/(Hello).*/)
+{ print "\nFound Pattern"; }
+else
 { print "\nUnable to find the pattern"; }
 
-my $a="Hello how are you"; 
-$a=~s/hello/cello/gi; 
+my $a="Hello how are you";
+$a=~s/hello/cello/gi;
 print "\n$a";
 
-my $a="hello how are you"; 
-$a=~tr/hello/cello/; 
+my $a="hello how are you";
+$a=~tr/hello/cello/;
 print "\n$a";
-
-=for comment
-Hello
-File Read Operations
-Enter Data to Write: Virag Nimeshkumar Dosani
-Virag Nimeshkumar Dosani
-
-Enter Data to Append: SE CMPN A - 77
-Data from file1 to file2 copied Sucessfully.
-File test1 is renamed to test2
-File test2 is deletedlines=2 words=43 chars=246
-
-Regular Expression
-Found Pattern
-cello how are you
-cello cow are you
-=cut
