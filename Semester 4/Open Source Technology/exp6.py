@@ -44,15 +44,19 @@ class Node(object):
         self.data = initdata
         self.next = None
 
+    @property
     def getData(self):
         return self.data
 
+    @getData.setter
     def setData(self, newdata):
         self.data = newdata
 
+    @property
     def getNext(self):
         return self.next
 
+    @getNext.setter
     def setNext(self, newnext):
         self.next = newnext
 
@@ -66,29 +70,49 @@ class LinkedList(object):
 
     def add(self, item):
         temp = Node(item)
-        temp.setNext(self.head)
+        temp.setNext = self.head
         self.head = temp
+
+    @property
+    def size(self):
+        current = self.head
+        count = 0
+        while current != None:
+            count += 1
+            current = current.getNext
+        return count
+
+    def search(self, item):
+        current = self.head
+        found = False
+        while current != None and not found:
+            if current.getData == item:
+                found = True
+            else:
+                current = current.getNext
+
+        return found
 
     def remove(self, item):
         current = self.head
         previous = None
         found = False
         while not found:
-            if current.getData() == item:
+            if current.getData == item:
                 found = True
             else:
                 previous = current
-                current = current.getNext()
+                current = current.getNext
         if previous == None:
-            self.head = current.getNext()
+            self.head = current.getNext
         else:
-            previous.setNext(current.getNext())
+            previous.setNext = current.getNext
 
     def printList(self):
         current = self.head
         while current != None:
             print(f"{current.data} -->", end="")
-            current = current.getNext()
+            current = current.getNext
         print("None")
 
 
@@ -124,6 +148,8 @@ myList.add(17)
 myList.add(93)
 myList.add(26)
 myList.add(54)
+print(myList.size)
+print(myList.search(17))
 myList.printList()
 myList.remove(93)
 myList.remove(54)
