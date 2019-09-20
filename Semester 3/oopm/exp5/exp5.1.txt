@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Main {
+	static Scanner sc = new Scanner(System.in);
+	public static void main (String [] args) {
+	System.out.println("Enter the number of element:");
+    int n = sc.nextInt();
+	System.out.println("Enter array of numbers:");
+	int[] array = new int[n];
+	for (int j = 0; j < n; j++){
+        array[j] = sc.nextInt();
+    }
+   	int temp;
+   	for (int i = 1; i < array.length; i++) {
+    	for (int j = i; j > 0; j--) {
+     		if (array[j] < array [j - 1]) {
+      			temp = array[j];
+      			array[j] = array[j - 1];
+      			array[j - 1] = temp;
+     		}
+    }}
+   	System.out.print("Ascending order: ");
+   	for (int i = 0; i < array.length; i++) {
+    	System.out.print(array[i] + " ");
+	}
+	System.out.print("\nDescending order: ");
+   	for (int i = n-1; i>=0; i--) 
+    	System.out.print(array[i] + " ");
+	System.out.println("\n");
+	}}
+--------------------------------------
+Output:
+Enter the number of element:
+ 4
+Enter array of numbers:
+ 23
+ 234
+ 231
+ 2314
+Ascending order: 23 231 234 2314 
+Descending order: 2314 234 231 23

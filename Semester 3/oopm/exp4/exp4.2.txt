@@ -1,0 +1,23 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Multiplication table of 7");
+	for(int i = 1, j =1; i<=70; i++){
+		if(i%7!=0)
+			continue;
+		else{
+			System.out.println("7 * " + j++ + " = " + i);
+		}}
+  }}
+--------------------------
+Output:
+Multiplication table of 7
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70

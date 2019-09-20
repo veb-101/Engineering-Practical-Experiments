@@ -1,0 +1,45 @@
+import Java.util.Scanner;
+class MyException extends Exception 
+{ 
+    public MyException(String s) 
+    { 
+        super(s); 
+    } 
+} 
+ 
+
+public class exp12 
+    static Scanner sc = new Scanner(System.in):
+{ 
+    public static void main(String args[]) 
+    { int age;
+    System.out.println("Eligible for voting...");
+    System.out.println("Enter your age:");
+    age = sc.nextInt();
+    
+        try
+        { if(age<18)
+        
+            throw new MyException("Not allowed to vote yet");
+           else
+             System.out.println("Allowed to vote, please vote wisely...");
+        } 
+        catch (MyException ex) 
+        { 
+            System.out.println(ex.getMessage()); 
+        } 
+    } 
+} 
+---------------------
+Output:
+
+Eligible for voting...
+Enter your age: 17
+Not allowed to vote yet
+
+
+Eligible for voting...
+Enter your age: 18
+Allowed to vote, please vote wisely...
+
+

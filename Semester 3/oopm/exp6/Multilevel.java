@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class student{
+	static Scanner sc = new Scanner(System.in);
+	String name;
+	int roll;
+	void getInfo(){
+		System.out.print("Enter Your name: ");
+		name = sc.nextLine();
+		System.out.print("Enter your roll no.: ");
+		roll = sc.nextInt();
+		System.out.println("\n");
+	}
+}
+
+class submarks extends student{
+	int m1, m2;
+	static Scanner sc = new Scanner(System.in);
+	void getMarks(){
+		super.getInfo();
+		System.out.print("Enter your TT-1 marks:");
+		m1 = sc.nextInt();
+		System.out.print("Enter your TT-2 marks:");
+		m2 = sc.nextInt();
+		System.out.println("\n");
+	}
+	void display(){
+		getMarks();
+		System.out.println("\n-----Details-----\n");
+		System.out.println("Name: "+ name);
+		System.out.println("Roll no.: "+ roll);
+		System.out.println("TT-1 marks: "+ m1);
+		System.out.println("TT-2 marks: "+ m2);
+	}		
+}
+
+class result extends submarks{
+	int total;
+	void display(){
+		super.display();
+		int total = super.m1 + super.m2;
+		System.out.println("Total marks: " + total);
+	}
+}
+
+class Main{
+  public static void main(String[] args) {
+	// submarks sb = new submarks();
+	// sb.display();
+	System.out.println("\n");
+	result rs = new result();
+	rs.display();
+
+  }
+}
