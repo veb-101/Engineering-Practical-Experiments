@@ -1,4 +1,4 @@
-## SEMESTER 34
+## SEMESTER 4
 ------------------
 
 #### Practicals
