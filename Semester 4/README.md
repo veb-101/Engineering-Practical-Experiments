@@ -1,7 +1,11 @@
-ReadMe file for semester 4
+## SEMESTER 34
+------------------
 
-Programming Language used:
-1) Computer Graphics - C
-2) Analysis of Algorithms - Python
-3) Operating System - C
-4) Open Source Technology - Python
+#### Practicals
+
+| SR NO. | Course                 | Language   |
+| ------ | ---------------------- | ---------- |
+| 1.     | Computer Graphics      | **C**      |
+| 2.     | Operating System       | **C**      |
+| 3.     | Analysis of Algorithms | **Python** |
+| 4.     | Open Source Technology | **Python** |
