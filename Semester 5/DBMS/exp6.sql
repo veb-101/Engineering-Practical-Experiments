@@ -1,0 +1,22 @@
+create table emp(id int, name varchar(20), city varchar(20));
+alter table emp add salary int;
+insert into emp values(1, 'sam', 'mumbai', 40000);
+insert into emp values(2, 'smith', 'jaipur', 50000);
+insert into emp values(3, 'sean', 'mumbai', 45000);
+
+SELECT ' --------------------------------------';
+select * from emp;
+SELECT ' --------------------------------------';
+select * from emp where name like 's%';
+SELECT ' --------------------------------------';
+select * from emp where name like 'sm%';
+SELECT ' --------------------------------------';
+select * from emp where name like '%n';
+SELECT ' --------------------------------------';
+select * from emp where name like '%a%';
+SELECT ' --------------------------------------';
+select * from emp where name like '_a%';
+SELECT ' --------------------------------------';
+select * from emp where name like '%t_';
+SELECT ' --------------------------------------';
+select * from emp where name not like '%a%';
