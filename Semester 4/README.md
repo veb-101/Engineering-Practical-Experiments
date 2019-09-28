@@ -1,7 +1,8 @@
-## SEMESTER 4
+# SEMESTER 4
+
 ------------------
 
-#### Practicals
+## Practicals
 
 | SR NO. | Course                 | Language   |
 | ------ | ---------------------- | ---------- |
