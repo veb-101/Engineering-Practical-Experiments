@@ -1,6 +1,8 @@
-## Engineering Practical Experiments
+# Engineering Practical Experiments
+
 --------------
-####  Collection of Mumbai University Computer Engineering department practical experiments.
+
+## Collection of Mumbai University Computer Engineering department practical experiments.
 
 </br>
 
@@ -15,3 +17,10 @@
 |          | Operating System           |
 |          | Analysis of Algorithms     |
 |          | Open Source Technology Lab |
+
+| Semester | Subjects                   |
+| -------- | -------------------------- |
+| 5        | Computer Networks          |
+|          | Web Development lab        |
+|          | Database Management system |
+|          | Microprocessors            |
