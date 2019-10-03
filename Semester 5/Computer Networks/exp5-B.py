@@ -22,7 +22,6 @@ def crc(msg, div, code='000'):
     return ''.join(msg[-len(code):])
 
 
-# TEST 1 ####################################################################
 print("Sender's side....")
 # Use a divisor that simulates: x^3 + x + 1
 div = '1011'
