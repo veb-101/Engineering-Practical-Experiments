@@ -1,0 +1,20 @@
+div {
+    clear: both;
+    width: 100%;
+    float: left;
+    padding: 10px 0px 10px 0px;
+}
+
+div label {
+    width: 30%;
+    float: left;
+}
+
+div input {
+    width: 50%;
+    float: left;
+}
+
+#gender {
+    width: auto !important;
+}
