@@ -50,7 +50,7 @@
         mov ax, 0000
         int 33h
         cmp ax, 0000
-        je exit
+        je exit1
         
         disp m1
         
@@ -81,23 +81,21 @@
             next:
                 mov ax, 0011h
                 int 10h
-                mov ah, 0ch
+                mov ah, 0ch; pixel printing
                 int 10h
             
             next1:
                 mov ax, 0003h
                 int 33h
                 cmp bx, 0002
-                je exit
+                je exit1
         jmp back
         
-        exit:
-            mov ax, 0004
+        exit1:
+            mov ah, 00h; going to text mode
             int 10h
             
-            mov ah, 31h
+            mov ah, 31h; terminate
             int 21h
         .exit
 end 
-        
-        
