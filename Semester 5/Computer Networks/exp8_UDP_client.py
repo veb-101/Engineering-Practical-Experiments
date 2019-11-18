@@ -2,13 +2,13 @@ import socket
 
 
 def Main():
-    host = '127.0.0.1'
-    port = 5001
 
+    # The UDP echo client is similar the server, but does not use bind() to
+    # attach its socket to an address. It uses sendto() to deliver its
+    # message directly to the server, and recvfrom() to receive the response.
     server = ('127.0.0.1', 5000)
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((host, port))
 
     message = input("=> ")
     while message != 'q':
