@@ -13,4 +13,4 @@
 | Exp8: Subqueries            | [repl.it](https://repl.it/@VaibhavSingh4/exp-8-subquery)              |
 | Exp 9: Refrential Integrity | [repl.it](https://repl.it/@VaibhavSingh4/exp-9-referential-integrity) |
 | Exp 11: Triggers            | [repl.it](https://repl.it/@VaibhavSingh4/exp-11-trigger)              |
-| Exp 12: Outer Joins         | [repl.it](https://repl.it/@VaibhavSingh4/exp-8-joins)                 |
+| Exp 12: Outer Joins         | [repl.it](https://repl.it/@VaibhavSingh4/exp-12-joins)                 |
