@@ -16,7 +16,8 @@ def crc(msg, div, code='000'):
         if msg[i] == '1':
             for j in range(len(div)):
                 # Perform modulo 2 multiplication on each index of the divisor
-                msg[i+j] = str((int(msg[i+j])+int(div[j])) % 2)
+                # msg[i+j] = str((int(msg[i+j])+int(div[j])) % 2)
+                msg[i+j] = str(int(msg[i+j]) ^ int(div[j]))
 
     # Output the last error-checking code portion of the message generated
     return ''.join(msg[-len(code):])
@@ -48,7 +49,7 @@ def errorFunc(msg, div, code):
     Error = input("Introduce error(T/F): ")
     if Error in ('T', 't'):
         msg = list(msg)
-        msg[7] = str(int(msg[7], 2) ^ 1)
+        msg[7] = str(int(msg[7]) ^ 1)
         msg = ''.join(msg)
         printCheck(msg, div, code)
     else:
