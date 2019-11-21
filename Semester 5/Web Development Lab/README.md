@@ -8,4 +8,5 @@
 | Exp 3: Web page with html5 & CSS3 | [repl.it](https://repl.it/@VaibhavSingh4/exp3-css)     |
 | Exp 4-A: Form Validation using JS | [repl.it](https://repl.it/@VaibhavSingh4/exp4-A)       |
 | Exp 5: College Website            | [repl.it](https://repl.it/@VaibhavSingh4/exp5-college) |
+| exp 6: simple web page using PHP  | [repl.it](https://repl.it/@VaibhavSingh4/exp6web)      |
 | Exp 8: Temperature Conversion     | [repl.it](https://repl.it/@VaibhavSingh4/exp8-C-to-F)  |
