@@ -13,7 +13,6 @@
     ENDM
     
     .startup
-        MOV DX, 0
         MOV AX, number
         MOV BX, 16
         MOV CL, 0

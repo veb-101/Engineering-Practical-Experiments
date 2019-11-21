@@ -61,7 +61,7 @@
         add dl, 30h
         mov ah, 02
         int 21h
-        ;for 1
+        ;for 2
         mov dx, no
         mov dl, dh
         and dl, 0fh

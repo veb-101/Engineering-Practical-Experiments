@@ -1,6 +1,6 @@
 ;------------ Basic mouse commands
 ;1) ax = 0000 -> mouse driver present or not
-;  int 21h
+;  int 33h
 
 ; return ax = 0000, mouse driver not present
 ;        ax = FFFF, mouse driver present
@@ -8,10 +8,10 @@
 ;2) ax = 0001 -> show mouse cursor
 ;   int 33h 
 
-;3) ax =0011h -> set graphics mode
+;3) ax = 0011h -> set graphics mode
 ;   int 10h
 
-;4) ax = 000 -> text mode
+;4) ah = 00 -> text mode
 ;   int 10h
 
 ;5) ax = 0003 -> get mouse button status

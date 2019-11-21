@@ -14,7 +14,6 @@
     .startup
         Disp m1
         mov cl, 0
-        mov dx, 0
         mov ax, no
         
         mov bx, 0ah
