@@ -1,6 +1,6 @@
 # Engineering Practical Experiments
 
---------------
+---
 
 ## Collection of Mumbai University Computer Engineering department practical experiments.
 
@@ -24,3 +24,10 @@
 |          | Web Development lab        |
 |          | Database Management system |
 |          | Microprocessors            |
+
+| Semester | Subjects                               |
+| -------- | -------------------------------------- |
+| 6        | System Programming and compiler design |
+|          | Crytography and System Security        |
+|          | Data Warehousing and Mining            |
+|          | Machine Learning                       |
