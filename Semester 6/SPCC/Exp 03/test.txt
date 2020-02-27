@@ -1,0 +1,12 @@
+PG1 START 0
+    USING *,BASE
+    L 1,FOUR
+    A 1,FIVE
+    A 1,=F'7'
+    A 1,=D'8'
+    ST 1,TEMP
+FOUR DC F'4'
+FIVE DC F'5'
+BASE EQV 8
+TEMP DC '1'D
+    END
