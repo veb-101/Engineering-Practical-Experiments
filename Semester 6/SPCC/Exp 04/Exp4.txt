@@ -1,0 +1,20 @@
+MACRO
+ADD1 &arg1
+A 1,&arg1
+A 2,&arg1
+A 3,&arg1
+MEND
+MACRO
+INCR &arg1,&arg2,&arg3
+A 1,&arg3
+A 2,&arg1
+A 3,&arg2
+MEND
+
+INCR Data1,Data2,Data3
+
+ADD1 Data1
+
+Data1 DC F'5'
+Data2 DC F'5'
+Data3 DC F'5'
