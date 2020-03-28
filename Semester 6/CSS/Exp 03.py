@@ -3,10 +3,11 @@ from random import choice
 import string
 # step 1: select any two large prime numbers
 
-# p, q = map(int, input("Enter prime numbers: ").split())
-p, q = 2, 13
-# step 2: Compute n = p*q
+p, q = map(int, input("Enter prime numbers: ").split())
+# p, q = 2, 13
 
+
+# step 2: Compute n = p*q
 n = p * q
 
 # step 3: phi(n) = (p - 1) * (q - 1)
@@ -16,7 +17,7 @@ phi_n = (p - 1) * (q - 1)
 # and gcd(e, phi_n) = 1
 e = []
 for i in range(2, phi_n):
-    if gcd(i, phi_n) == 1: 
+    if gcd(i, phi_n) == 1:
         e.append(i)
 
 e = choice(e)
@@ -34,21 +35,37 @@ for i in k:
 
 d = d[0]
 
-char_int_mapping = {j: i for i, j in enumerate(string.ascii_lowercase)}
+print(p, q, n, phi_n, e, d)
 
-int_char_mapping = {i: j for i, j in enumerate(string.ascii_lowercase)}
 
-alphabets = string.ascii_lowercase
-# step 6: Encryption
+# step 6: Encryption and Decryption
 
-# plain_text = input("Enter text: ")
-plain_text = "test wow"
+ASCII = string.ascii_letters + string.digits + string.punctuation
 
-plain_text = plain_text.lower().replace(" ", "")
-plain_text_num = ""
-cipher_text = []
+Char_Num = {j: i for i, j in enumerate(ASCII)}
+Num_Char = {i: j for i, j in enumerate(ASCII)}
+
+plain_text = input("\nEnter plain Text: ")
+plain_text = plain_text.replace(" ", "")
+plain_list = []
+cipher_list = []
+
 for i in plain_text:
-    plain_text_num += str(char_int_mapping[i])
+    plain_list.append(Char_Num[i])
+    cipher_list.append((Char_Num[i] ** e) % n)
 
-plain_text_num = int(plain_text_num)
+print("\nEncryption: ", end="")
 
+for i in cipher_list:
+    print(Num_Char[i], end="")
+    decipher_list = []
+
+for i in cipher_list:
+    decipher_list.append((i ** d) % n)
+
+print("\nDecryption: ", end="")
+
+for i in decipher_list:
+    print(Num_Char[i], end="")
+
+print()
