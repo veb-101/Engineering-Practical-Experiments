@@ -9,7 +9,7 @@ def encrypt(text, key):
     text = text.lower()
     for letter in text:
         letter_key = char_num_map[letter]
-        rotation = (letter_key + key) % 27
+        rotation = (letter_key + key) % vocab_size
         encrypted += num_char_map[rotation]
     return encrypted
 
@@ -19,12 +19,13 @@ def decrypt(text, key):
     text = text.lower()
     for letter in text:
         letter_key = char_num_map[letter]
-        rotation = (letter_key - key) % 27
+        rotation = (letter_key - key) % vocab_size
         decrypted += num_char_map[rotation]
     return decrypted
 
 
 if __name__ == "__main__":
+    vocab_size = len(string.ascii_lowercase + " ")
     message = input("Enter text: ")
     encrypted_message = encrypt(message, 3)
     decrypted_message = decrypt(encrypted_message, 3)

@@ -26,16 +26,17 @@ def modInverse(a, m):
 
 def decrypt(text, key):
     decrypted = ""
-    key = modInverse(key, 27)
+    key = modInverse(key, vocab_size)
     text = text.lower()
     for letter in text:
         letter_key = char_num_map[letter]
-        rotation = (letter_key * key) % 27
+        rotation = (letter_key * key) % vocab_size
         decrypted += num_char_map[rotation]
     return decrypted
 
 
 if __name__ == "__main__":
+    vocab_size = len(string.ascii_lowercase + " ")
     message = input("Enter text: ")
     encrypted_message = encrypt(message, 5)
     decrypted_message = decrypt(encrypted_message, 5)
