@@ -4,6 +4,8 @@
 
 ------------
 
+* Rail fence and autokey cipher encryption implemented in exp 02
+
 | Experiment            | Link                                                         |
 | --------------------- | ------------------------------------------------------------ |
 | Exp 2: Product Cipher | [repl.it](https://repl.it/@VaibhavSingh4/CSSexp2)            |
