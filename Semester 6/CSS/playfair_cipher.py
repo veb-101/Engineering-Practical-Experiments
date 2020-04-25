@@ -106,7 +106,13 @@ def decode(ciphertext, key):
 
 
 if __name__ == "__main__":
-    encrypted_text = encode("test message", "airplane")
-    decrypted_text = decode(encrypted_text, "airplane")
-    print(encrypted_text)
-    print(decrypted_text)
+    message = input("Enter message: ")
+    key = input("Enter key: ")
+    
+    message = message.lower().replace("j", "i")
+
+    encrypted_text = encode(message, key)
+    decrypted_text = decode(encrypted_text, key)
+
+    print(f"Encrypted text: {encrypted_text}")
+    print(f"Decrypted text: {decrypted_text}")
