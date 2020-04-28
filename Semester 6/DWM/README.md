@@ -1,6 +1,12 @@
 ### DWM Lab Experiments
 
 - Actual code are present in [this](https://github.com/veb-101/Machine-Learning-Algorithms) repository
+* Install dependencies first
+
+```python
+python -m pip install -r requirements.txt (for windows)
+python3 -m pip install -r requirements.txt (for ubuntu)
+```
 
 | Experiment  | Title                            | Link                                                                                                                                        |
 | ----------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
