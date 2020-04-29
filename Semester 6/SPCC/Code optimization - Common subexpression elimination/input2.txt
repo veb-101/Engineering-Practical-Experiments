@@ -1,0 +1,4 @@
+c = a/b * d
+a = c * d * a/b * d
+f = a/b * c/d + e
+g = f * a/b - c/d

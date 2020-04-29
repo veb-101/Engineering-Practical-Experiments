@@ -1,0 +1,5 @@
+Follow (S): ['$']
+Follow (A): ['c']
+Follow (B): ['d']
+Follow (C): ['e']
+Follow (D): ['$']

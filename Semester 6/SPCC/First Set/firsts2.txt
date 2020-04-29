@@ -1,0 +1,3 @@
+First (S): ['a', 'o', 'c', 'o']
+First (B): ['a', 'o']
+First (C): ['c', 'o']
