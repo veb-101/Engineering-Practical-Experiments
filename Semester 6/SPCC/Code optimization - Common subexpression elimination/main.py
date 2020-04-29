@@ -1,3 +1,7 @@
+'''
+    author: Virag Dosani (@repl.it/@VTech1699)
+'''
+
 import re
 import os
 os.system("clear")
