@@ -125,11 +125,12 @@ plt.scatter(X[:, 0], X[:, 1], s=50, c="b")
 plt.title("2-dimensional data")
 plt.xlabel("X1")
 plt.ylabel("X2")
+plt.savefig("./K-means_dataset.png")
 plt.show()
 
 
 # num_centroids = int(input("Number of centroids: "))
-num_centroids = 2
+num_centroids = 3
 centroids = []
 
 # Initial centroids
@@ -148,7 +149,7 @@ num_iterations = 4
 # centroids = np.array([[-2, 3],
 #                       [3, -2]])
 
-colors = ["red", "green"]
+colors = ["red", "green", "blue"]
 
 for idx, centroid in enumerate(centroids, 1):
     plt.plot(centroid[0], centroid[1], marker="^",
@@ -160,6 +161,7 @@ plt.scatter(X[:, 0], X[:, 1], c="k")
 plt.title("$Initial$", fontsize=18)
 plt.xlabel("X1", fontsize=15)
 plt.ylabel("X2", fontsize=15, rotation=0)
+plt.savefig("./K-means_Initial.png")
 plt.show()
 
 
@@ -197,4 +199,5 @@ for i in range(num_iterations):
 
     distances = distanceToCentroids(X, centroids)
     centroids, centroid_points = getNewCentroid(X, distances, num_centroids)
+plt.savefig("./K-means_Final.png")
 plt.show()
