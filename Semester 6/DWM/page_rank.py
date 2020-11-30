@@ -1,3 +1,7 @@
+import string
+
+LETTERS = string.ascii_uppercase
+
 graph = [
         [0, 0, 1, 1, 1, 0, 0],
         [0, 1, 0, 1, 1, 0, 1],
@@ -25,7 +29,7 @@ class Node:
         return f"Node {self.name}: Inbound: {self.inbound} ; Outbound: {self.outbound}"
 
 
-def page_rank(nodes, limit=4, d=0.85):
+def page_rank(nodes, limit=20, d=0.85):
     ranks = {}
     for node in nodes:
         ranks[node.name] = 1
@@ -37,14 +41,17 @@ def page_rank(nodes, limit=4, d=0.85):
     for i in range(limit):
         print(f"======= Iteration {i + 1} =======")
         for j, node in enumerate(nodes):
-            ranks[node.name] = (1 - d) + d * sum(
+            ranks[node.name] = (1 - d) / num_nodes + d * sum(
                 [ranks[ib] / outbounds[ib] for ib in node.inbound]
             )
         print(ranks)
 
 
 def main():
-    names = list(input("Enter Names of the Nodes: ").split())
+    num_nodes = len(graph)
+
+    # names = list(input("Enter Names of the Nodes: ").split())
+    names = list(LETTERS[:num_nodes])
 
     nodes = [Node(name) for name in names]
 
@@ -62,4 +69,5 @@ def main():
 
 
 if __name__ == "__main__":
+    num_nodes = len(graph)
     main()
