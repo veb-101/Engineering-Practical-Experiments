@@ -44,6 +44,8 @@ def page_rank(nodes, limit=20, d=0.85):
             ranks[node.name] = (1 - d) / num_nodes + d * sum(
                 [ranks[ib] / outbounds[ib] for ib in node.inbound]
             )
+        
+        ranks = dict(sorted(ranks.items(), key=lambda item: item[1], reverse=True))
         print(ranks)
 
 
