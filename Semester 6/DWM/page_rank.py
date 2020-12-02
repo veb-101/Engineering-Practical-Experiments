@@ -38,21 +38,33 @@ def page_rank(nodes, limit=20, d=0.85):
     for node in nodes:
         outbounds[node.name] = len(node.outbound)
 
-    for i in range(limit):
+    last_iteration_ranks = ranks.copy()
+
+    i = 0
+    while True:
         print(f"======= Iteration {i + 1} =======")
         for j, node in enumerate(nodes):
-            ranks[node.name] = (1 - d) / num_nodes + d * sum(
+            ranks[node.name] = round((1 - d) / num_nodes + d * sum(
                 [ranks[ib] / outbounds[ib] for ib in node.inbound]
-            )
-        
-        ranks = dict(sorted(ranks.items(), key=lambda item: item[1], reverse=True))
+            ), 5)
+
+        ranks = dict(
+            sorted(ranks.items(), key=lambda item: item[1], reverse=True))
+
+        if ranks == last_iteration_ranks:
+            print("Page ranks converged.")
+            print(ranks)
+            break
+        else:
+            last_iteration_ranks = ranks.copy()
+
         print(ranks)
+        i += 1
 
 
 def main():
     num_nodes = len(graph)
 
-    # names = list(input("Enter Names of the Nodes: ").split())
     names = list(LETTERS[:num_nodes])
 
     nodes = [Node(name) for name in names]
